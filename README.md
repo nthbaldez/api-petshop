@@ -1,4 +1,4 @@
-<h1 align="center" style="font-weight: bold;">Petshop E-commerce</h1>
+<h1 align="center" style="font-weight: bold;">Petshop API</h1>
 
 <p align="center">
  <a href="#tech">Technologies</a> • 
@@ -11,16 +11,6 @@
     <b>An API for a petshop marketplace with NestJS and GraphQL.</b>
 </p>
 
-<!-- <p align="center">
-  <a href="https://focustodo.vercel.app/">📱 Visit this Project</a>
-</p> -->
-
-<h2 id="layout">🎨 Layout</h2>
-
-<p align="center">
-    <img src="/public/image.png" alt="Image Example" width="400px">
-</p>
-
 <h2 id="technologies">💻 Technologies</h2>
 
 - NestJS
@@ -30,6 +20,14 @@
 - Faker JS
 
 <h2 id="started">🚀 Getting started</h2>
+
+<h3>Documentation</h3>
+
+You need to run the project. GraphQL APIs create schema and docs automatically.
+
+<p align="center">
+  <img src="/src/public/graphql-tests.png" alt="Image Example" width="400px">
+</p>
 
 <h3>Prerequisites</h3>
 
@@ -43,7 +41,7 @@ Here are the prerequisites to run this project:
 How to clone this project
 
 ```bash
-git clone https://github.com/nthbaldez/todo-app-typescript.git
+git clone https://github.com/nthbaldez/api-petshop.git
 ```
 
 <h3>Starting</h3>
@@ -53,14 +51,7 @@ How to start your project
 ```bash
 cd project-name
 npm install
-npm run dev
-```
-
-How to start the api for the project
-
-```bash
-cd api
-yarn start
+npm run start:dev
 ```
 
 <h2 id="colab">🤝 Collaborators</h2>
@@ -82,7 +73,7 @@ yarn start
 
 Here you will explain how other developers can contribute to your project. For example, explaining how can create their branches, which patterns to follow and how to open an pull request
 
-1. `git clone https://github.com/nthbaldez/todo-app-typescript.git`
+1. `git clone https://github.com/nthbaldez/api-petshop.git`
 2. `git checkout -b feature/NAME`
 3. Follow commit patterns
 4. Open a Pull Request explaining the problem solved or feature made, if exists, append screenshot of visual modifications and wait for the review!
