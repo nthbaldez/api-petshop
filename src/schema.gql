@@ -20,5 +20,5 @@ scalar DateTime
 
 type Query {
   allProducts(sortField: String = "", sortOrder: String = "", category: String = ""): [Product!]!
-  product(id: String!): Product!
+  Product(id: String!): Product!
 }

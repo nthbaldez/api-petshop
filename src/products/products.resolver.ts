@@ -27,7 +27,7 @@ export class ProductsResolver {
   }
 
   @Query(() => Product)
-  product(@Args('id') id: string) {
+  Product(@Args('id') id: string) {
     return this.productsService.findOneById(id);
   }
 }

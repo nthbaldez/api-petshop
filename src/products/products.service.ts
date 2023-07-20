@@ -129,52 +129,25 @@ export class ProductsService {
     return this.products;
   }
 
-  // async getProductsSortedByField(sortField: string): Promise<Product[]> {
-  //   const productsSorted = this.products.sort((productA, productB) => {
-  //     return productA[sortField] - productB[sortField];
-  //   });
-
-  //   return productsSorted;
-  // }
-
   async getProductsSortedByOrder(
     sortField: string,
     sortOrder: string,
   ): Promise<Product[]> {
     if (sortOrder === 'ASC') {
-      if (sortField === 'sales') {
-        const sortedProducts = this.products
-          .slice()
-          .sort((productA, productB) => {
-            return productA[sortField] - productB[sortField];
-          });
+      const sortedProducts = this.products
+        .slice()
+        .sort((productA, productB) => {
+          return productA[sortField] - productB[sortField];
+        });
 
-        return sortedProducts;
-      } else {
-        const sortedProducts = this.products
-          .slice()
-          .sort((productA, productB) => {
-            return productA[sortField].localeCompare(productB[sortField]);
-          });
-        return sortedProducts;
-      }
+      return sortedProducts;
     } else {
-      if (sortField === 'sales') {
-        const sortedProducts = this.products
-          .slice()
-          .sort((productA, productB) => {
-            return productB[sortField] - productA[sortField];
-          });
-
-        return sortedProducts;
-      } else {
-        const sortedProducts = this.products
-          .slice()
-          .sort((productA, productB) => {
-            return productB[sortField].localeCompare(productA[sortField]);
-          });
-        return sortedProducts;
-      }
+      const sortedProducts = this.products
+        .slice()
+        .sort((productA, productB) => {
+          return productB[sortField] - productA[sortField];
+        });
+      return sortedProducts;
     }
   }
 
