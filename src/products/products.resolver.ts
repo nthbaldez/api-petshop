@@ -13,16 +13,21 @@ export class ProductsResolver {
     @Args('category', { defaultValue: '', nullable: true }) category?: string,
   ) {
     if (sortField !== '' && sortOrder !== '' && category === '') {
-      return this.productsService.getProductsSortedByOrder(
+      const sortedProducts = this.productsService.getProductsSortedByOrder(
         sortField,
         sortOrder,
       );
+      return sortedProducts;
+    } else if (category !== '') {
+      const sortedProductsByCategory =
+        this.productsService.getProductsByCategory(
+          sortField,
+          sortOrder,
+          category,
+        );
+      return sortedProductsByCategory;
     } else {
-      return this.productsService.getProductsByCategory(
-        sortField,
-        sortOrder,
-        category,
-      );
+      return this.productsService.getAllProducts();
     }
   }
 

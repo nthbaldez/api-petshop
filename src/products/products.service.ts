@@ -165,7 +165,6 @@ export class ProductsService {
       (product) => product.category === category,
     );
 
-    console.log(productsSortedByFieldAndOrder);
     return productsFiltered;
   }
 
